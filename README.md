@@ -88,25 +88,25 @@ These are the basic specs for "Mmmarkdown", broken into 5 stages. If you complet
 Setup the repo and file structure, install and configure [Express][], and get a basic server running.
 
 - [x] Repo (your artifact) is created on GitHub
-- [ ] Repo follows a conventional file structure for an Express.js app:
-  - [ ] `package.json`: standard for any Node.js app; includes package info and lists dependencies
-  - [ ] `app.js`: your Express server, with all routes defined
-  - [ ] `views/`: for storing your Pug HTML templates
-  - [ ] `public/`: for storing static files like CSS and images
-  - [ ] `README.md`: includes overview of your repo
-- [ ] Express server can be started with `$ node app.js`
-- [ ] Server renders a page at the root route (`/`) that looks like the [mockup](#mockups) but does not have any functionality - it is just a static page
-- [ ] All package dependencies are defined in `package.json`
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
+- [x] Repo follows a conventional file structure for an Express.js app:
+  - [x] `package.json`: standard for any Node.js app; includes package info and lists dependencies
+  - [x] `app.js`: your Express server, with all routes defined
+  - [x] `views/`: for storing your Pug HTML templates
+  - [x] `public/`: for storing static files like CSS and images
+  - [x] `README.md`: includes overview of your repo
+- [x] Express server can be started with `$ node app.js`
+- [x] Server renders a page at the root route (`/`) that looks like the [mockup](#mockups) but does not have any functionality - it is just a static page
+- [x] All package dependencies are defined in `package.json`
+- [x] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
 
 #### Stage 2
 
 Build out the template structure with [Pug][] for a single-file editor. Don't worry about multiple files for now, or implementing the markdown rendering.
 
-- [ ] Pug is installed and set up for HTML templating
-- [ ] View template files are created in the `/views` subdirectory
-- [ ] Main view file is called `index`
-- [ ] Includes are created for the different "components" of the main view:
+- [x] Pug is installed and set up for HTML templating
+- [x] View template files are created in the `/views` subdirectory
+- [x] Main view file is called `index`
+- [x] Includes are created for the different "components" of the main view:
   - [ ] Sidebar (shows list of files)
   - [ ] Header (shows current filename, word count, and save button)
   - [ ] Editor (shows markdown editor pane)
