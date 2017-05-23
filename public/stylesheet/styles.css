@@ -32,7 +32,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15pt;
   padding: 15px;
-  width: 97.5%;
 }
 
 .mainArea {
@@ -48,7 +47,7 @@ body {
 
 .editorHeader, .previewHeader {
   padding: 10px;
-  border-style: solid;
+  border: 1px solid gray;
   color: gray;
 }
 
@@ -60,10 +59,12 @@ body {
 
 .previewForm {
   display: inline-block;
+  position: absolute;
   width: 50%;
 }
 
 #preview {
+
   font-size: 15pt;
   height: 90%;
   width: 100%;
