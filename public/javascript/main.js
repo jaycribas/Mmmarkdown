@@ -5,10 +5,11 @@ $(document).ready(function(){
   })
 
   $('.saveMarkdown').bind('click', function() {
-    const example = 'example.md'
+    const example = document.getElementById('editor').value.match(/\w+/)
+    
     const markdownText = document.getElementById('editor').value
     const fileName = window.prompt('Save file as...', example)
-    if (fileName === '') {
+    if (fileName === '' || !example) {
       window.alert('invalid file name')
     } else {
       const headers = new Headers({'Content-Type':'application/json'})
@@ -17,6 +18,7 @@ $(document).ready(function(){
         headers,
         body: JSON.stringify({ fileData: markdownText, fileName })
       })
+      window.location.reload()
     }
   })
 

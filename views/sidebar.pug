@@ -2,10 +2,8 @@
   .appName
     h2 mmmarkdown
   span.files
-    div some file
-      button delete
-    div some file
-      button delete
-    div some file
-      button delete
-    div create new file
+    for file in files
+      .file= file
+        form.deleteFile(action=`/api/delete/${file}` method="post")
+          button(type="submit") delete
+    .file create new file

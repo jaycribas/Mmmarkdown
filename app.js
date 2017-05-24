@@ -5,10 +5,6 @@ const app = express()
 const routes = require('./routes/routes')
 const path = require('path')
 
-app.get('/', (request, response) => {
-  response.render('index')
-})
-
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
