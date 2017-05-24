@@ -8,6 +8,13 @@ router.get('/', (request, response) => {
   })
 })
 
+router.get('/:file', (request, response) => {
+  const { file } = request.params
+  fs.readFile(`./server/data/${file}`, (error, data) => {
+    response.render('index', {fileName: file, content: data})
+  })
+})
+
 router.post('/api/savingMarkdown', (request, response) => {
   const { fileData, fileName } = request.body
   fs.appendFile(`./server/data/${fileName}.md`, fileData, (error) => {
@@ -22,5 +29,6 @@ router.post('/api/delete/:file', (request, response) => {
   })
   response.redirect('/')
 })
+
 
 module.exports = router

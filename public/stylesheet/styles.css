@@ -1,10 +1,17 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: monospace;
+}
+
 body {
   width: 99%;
+  overflow-x: hidden;
 }
 
 .sidebar {
   display: inline-block;
-  width: 18%;
+  width: 15%;
   height: 100%;
 }
 
@@ -43,13 +50,13 @@ body {
 
 .mainArea {
   float: right;
-  width: 82%;
+  width: 85%;
   height: 100%;
 }
 
 .editorForm {
   display: inline-block;
-  width: 50%;
+  width: 51%;
 }
 
 .editorHeader {
@@ -60,9 +67,9 @@ body {
 
 .previewHeader {
   padding: 10px;
-  border-width: 1px solid;
+  border: 1px solid gray;
   color: gray;
-  width: 78%;
+  width: 78.2%;
 }
 
 #editor {
@@ -74,7 +81,7 @@ body {
 .previewForm {
   display: inline-block;
   position: absolute;
-  width: 50%;
+  width: 50.8%;
 }
 
 #preview {
@@ -83,5 +90,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15pt;
   min-height: 600px;
+  max-height: 600px;
+  overflow: scroll;
   width: 81%;
 }
