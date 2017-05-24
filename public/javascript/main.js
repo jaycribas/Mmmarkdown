@@ -7,11 +7,11 @@ $(document).ready(function(){
   $('.saveMarkdown').bind('click', function() {
     const example = 'example.md'
     const markdownText = document.getElementById('editor').value
-    const headers = new Headers({'Content-Type':'application/json'})
     const fileName = window.prompt('Save file as...', example)
     if (fileName === '') {
       window.alert('invalid file name')
     } else {
+      const headers = new Headers({'Content-Type':'application/json'})
       fetch('/api/savingMarkdown', {
         method: 'post',
         headers,

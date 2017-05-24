@@ -4,7 +4,7 @@ const fs = require('fs')
 
 router.post('/api/savingMarkdown' ,(request, response) => {
   const { fileData, fileName } = request.body
-  fs.writeFile('../server/data/' + fileName + '.md', function(error) {
+  fs.appendFile(`./server/data/${fileName}.md`, fileData,function(error) {
     if (error) throw error
   })
 })
