@@ -10,7 +10,7 @@ router.get('/', (request, response) => {
 
 router.get('/:file', (request, response) => {
   const { file } = request.params
-  fs.readFile(`./server/data/${file}`, (error, data) => {
+  fs.readFile(`./server/data/${file}`, 'utf8',(error, data) => {
     response.render('index', {fileName: file, content: data})
   })
 })
