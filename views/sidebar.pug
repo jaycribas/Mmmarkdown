@@ -8,6 +8,6 @@
   span.files
     for file in files
       .file(id=`${file}`)= file
-        form.deleteFile(action=`/api/delete/${file}` method="post")
+        form.deleteFile(id=`${file}`)
           button(type="submit") delete
     .file create new file
