@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  document.getElementById('preview').innerHTML = marked(document.getElementById('editor').value)
   $('#editor').bind('keydown keyup keypress', function (){
     $('#preview').html(marked(this.value) || 'markdown preview')
   })
@@ -12,7 +11,7 @@ $(document).ready(function(){
       window.alert('invalid file name')
     } else {
       const headers = new Headers({'Content-Type':'application/json'})
-      fetch('/api/savingMarkdown', {
+      $.ajax('/api/savingMarkdown', {
         method: 'post',
         headers,
         body: JSON.stringify({ fileData: markdownText, fileName })
@@ -21,7 +20,18 @@ $(document).ready(function(){
     }
   })
 
-  // $('.file').bind('click', function() {
-  //
-  // })
+  $('.file').click(function(){
+    const file = $(this).attr('id')
+    $('.fileName').text(file)
+    $.ajax({
+      method: 'GET',
+      url: `/server/data/${file}`,
+      dataType: 'json',
+      success: function(responseJson){
+        $('#editor').val(responseJson.data)
+        $('#preview').html(marked(responseJson.data))
+      }
+    })
+  })
+
 })

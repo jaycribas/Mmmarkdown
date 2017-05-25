@@ -8,10 +8,10 @@ router.get('/', (request, response) => {
   })
 })
 
-router.get('/:file', (request, response) => {
+router.get('/server/data/:file', (request, response) => {
   const { file } = request.params
-  fs.readFile(`./server/data/${file}`, 'utf8',(error, data) => {
-    response.render('index', {fileName: file, content: data})
+  fs.readFile(`./server/data/${file}`, 'utf8', (error, data) => {
+    response.json({data})
   })
 })
 
@@ -29,6 +29,5 @@ router.post('/api/delete/:file', (request, response) => {
   })
   response.redirect('/')
 })
-
 
 module.exports = router
