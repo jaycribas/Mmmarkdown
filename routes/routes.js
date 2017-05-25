@@ -17,17 +17,17 @@ router.get('/server/data/:file', (request, response) => {
 
 router.post('/api/savingMarkdown', (request, response) => {
   const { fileData, fileName } = request.body
-  fs.appendFile(`./server/data/${fileName}.md`, fileData, (error) => {
+  fs.writeFile(`./server/data/${fileName}.md`, fileData, (error) => {
     if (error) throw error
       response.status(201)
   })
 })
 
-router.delete('/api/delete/:file', (request, response) => {
+router.post('/api/delete/:file', (request, response) => {
   const { file } = request.params
   fs.unlink(`./server/data/${file}`, (error) => {
     if (error) throw error
-     response.status(200)
+     response.redirect('/')
   })
 })
 
