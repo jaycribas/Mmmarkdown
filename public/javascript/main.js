@@ -1,22 +1,23 @@
 $(document).ready(function(){
+
   $('#editor').bind('keydown keyup keypress', function (){
-    $('#preview').html(marked(this.value) || 'markdown preview')
+    $('#preview').html(marked(this.value))
   })
 
   $('.saveMarkdown').bind('click', function() {
-    const example = document.getElementById('editor').value.match(/\w+/)
-    const markdownText = document.getElementById('editor').value
+    const example = $('#editor').val().match(/\w+/)
+    const markdownText = $('#editor').val()
     const fileName = window.prompt('Save file as...', example)
     if (fileName === '') {
       window.alert('invalid file name')
     } else {
-      const headers = new Headers({'Content-Type':'application/json'})
-      fetch('/api/savingMarkdown', {
+
+      $.ajax({
+        url: '/api/savingMarkdown',
         method: 'post',
-        headers,
-        body: JSON.stringify({ fileData: markdownText, fileName })
+        data: { fileData: markdownText, fileName },
+        dataType: 'html'
       })
-      window.location.reload()
     }
   })
 
