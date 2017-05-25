@@ -11,7 +11,7 @@ $(document).ready(function(){
       window.alert('invalid file name')
     } else {
       const headers = new Headers({'Content-Type':'application/json'})
-      $.ajax('/api/savingMarkdown', {
+      fetch('/api/savingMarkdown', {
         method: 'post',
         headers,
         body: JSON.stringify({ fileData: markdownText, fileName })
@@ -23,6 +23,8 @@ $(document).ready(function(){
   $('.file').click(function(){
     const file = $(this).attr('id')
     $('.fileName').text(file)
+    $('.file').removeClass('current-file')
+    $(this).toggleClass('current-file')
     $.ajax({
       method: 'GET',
       url: `/server/data/${file}`,
@@ -33,5 +35,7 @@ $(document).ready(function(){
       }
     })
   })
+
+
 
 })
