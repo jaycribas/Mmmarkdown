@@ -121,20 +121,20 @@ Setup real markdown rendering so that writing in the left panel updates the righ
 - [x] Marked is installed
 - [x] Markdown text written in the "Editor" pane is rendered in the "Preview" pane automatically
 - [x] Preview is updated every time text in the editor changes
-- [ ] Clicking the "Save" button saves the markdown text in the editor to a file in a subdirectory of the server `data/`
+- [x] Clicking the "Save" button saves the markdown text in the editor to a file in a subdirectory of the server `data/`
 - [ ] The markdown file in `data/` is loaded and used as the starter text in the editor (in other words, the last saved text is loaded by default)
 
 #### Stage 4
 
 Build out multiple-file functionality, and use cookies to remember the last opened file.
 
-- [ ] Users can create more than one markdown file
-- [ ] Markdown files are listed in the sidebar
-- [ ] Clicking on a file name in the sidebar will open the file in the "Editor" and render it in the "Preview", replacing the current file.
+- [x] Users can create more than one markdown file
+- [x] Markdown files are listed in the sidebar
+- [x] Clicking on a file name in the sidebar will open the file in the "Editor" and render it in the "Preview", replacing the current file.
     You can accomplish this using _either_ server-side rendering + custom routes for each file _or_ with JavaScript by making AJAX calls to retreive data from the server and update the DOM. See the "Multiple vs. Single Page" below for more context.
-- [ ] Clicking on the "New File" button in the sidebar lets users create a new file and prompts for the file name either using the archaic built in `prompt()` method OR better yet, building it into the UI in another beautiful way.
-- [ ] Clicking on a file in the sidebar will navigate to the page, load the file contents into the editor, and render them in the preview
-- [ ] Markdown content can still be saved to files in `data/`, with one file in `data/` for each file in the sidebar
+- [x] Clicking on the "New File" button in the sidebar lets users create a new file and prompts for the file name either using the archaic built in `prompt()` method OR better yet, building it into the UI in another beautiful way.
+- [x] Clicking on a file in the sidebar will navigate to the page, load the file contents into the editor, and render them in the preview
+- [x] Markdown content can still be saved to files in `data/`, with one file in `data/` for each file in the sidebar
 - [ ] Most recently edited file is tracked using a cookie
 - [ ] When visiting the root route (`/`), users are redirected to the file they last edited
 
@@ -166,9 +166,9 @@ Try to mimic the following mockup as closely as you can. Note that some of the f
 
 If you complete all of the specs listed above (the checkboxes), there's no reason to stop there! Try building more advanced features with these stretch specs.
 
-- [ ] Clicking the trash can icon...
-  - [ ] Deletes the file from the `data/` folder
-  - [ ] Shows the sidebar updated without the deleted file
+- [x] Clicking the trash can icon...
+  - [x] Deletes the file from the `data/` folder
+  - [x] Shows the sidebar updated without the deleted file
 - [ ] "Word count" section in the header displays the word count for the currently open file
 
 ##### Use a Database
