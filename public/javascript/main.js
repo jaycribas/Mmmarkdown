@@ -11,6 +11,7 @@ $(document).ready(function(){
     if (fileName === '') {
       window.alert('invalid file name')
     } else {
+
       $.ajax({
         url: '/api/savingMarkdown',
         method: 'post',
@@ -23,6 +24,8 @@ $(document).ready(function(){
   $('.file').click(function(){
     const file = $(this).attr('id')
     $('.fileName').text(file)
+    $('.file').removeClass('current-file')
+    $(this).toggleClass('current-file')
     $.ajax({
       method: 'GET',
       url: `/server/data/${file}`,
@@ -33,5 +36,7 @@ $(document).ready(function(){
       }
     })
   })
+
+
 
 })
