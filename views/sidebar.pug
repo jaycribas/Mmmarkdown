@@ -1,11 +1,14 @@
 .sideBar
-  .appName
-    h2 mmmarkdown
+  .appName 
+    h1 mmmarkdown
+    p.appDescription
+      | ...the 
+      span.emphasis Lobster 
+      | of markdown editors (๑ > ◡ < ๑)
   span.files
     for file in files || 'a'
-      a(href=`/${file}`)
-        .file= file
+        .file(id=`${file}`)= file
           form.deleteFile(action=`/api/delete/${file}` method="post")
             button(type="submit") delete
     a(href="/")
-      .file create new file
+      .createNew create new file
