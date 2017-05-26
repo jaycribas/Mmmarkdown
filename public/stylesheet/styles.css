@@ -3,6 +3,13 @@ body {
   overflow-x: hidden;
 }
 
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
 .sidebar {
   display: inline-block;
   height: 100%;
@@ -71,6 +78,12 @@ button.trash, button.trash:hover {
   font-family: Lobster, Arial, Helvetica, sans-serif;
   font-size: 15pt;
   padding: 15px;
+}
+
+.charCounter {
+  padding-left: 70%;
+  font-size: 13pt;
+  display: inline-block;
 }
 
 .saveMarkdown {
