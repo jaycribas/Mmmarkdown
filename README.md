@@ -1,5 +1,8 @@
 # Mmmarkdown
 
+Project Name: shrill-flycatcher  
+Team: Jay Cribas, Greg Kousagi  
+
 ## Challenge Rating
 
 This goal will likely be within your ZPD if you...
