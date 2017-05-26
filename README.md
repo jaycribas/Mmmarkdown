@@ -135,7 +135,7 @@ Build out multiple-file functionality, and use cookies to remember the last open
 - [x] Clicking on the "New File" button in the sidebar lets users create a new file and prompts for the file name either using the archaic built in `prompt()` method OR better yet, building it into the UI in another beautiful way.
 - [x] Clicking on a file in the sidebar will navigate to the page, load the file contents into the editor, and render them in the preview
 - [x] Markdown content can still be saved to files in `data/`, with one file in `data/` for each file in the sidebar
-- [ ] Most recently edited file is tracked using a cookie
+- [x] Most recently edited file is tracked using a cookie
 - [ ] When visiting the root route (`/`), users are redirected to the file they last edited
 
 **Multiple vs. Single Page**
