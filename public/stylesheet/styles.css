@@ -81,9 +81,13 @@ button.trash, button.trash:hover {
 }
 
 .charCounter {
+  color: white;
   padding-left: 70%;
-  font-size: 13pt;
+  font-family: Lobster;
+  font-size: 12pt;
   display: inline-block;
+  bottom: 37px;
+  position: relative;
 }
 
 .saveMarkdown {
