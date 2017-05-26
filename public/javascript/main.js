@@ -34,6 +34,7 @@ $(document).ready(function(){
 
   $('.file').click(function(){
     const file = $(this).attr('id') || 'mmmarkdown.md'
+    document.cookie = 'most-recent='+file
     $('.fileName').text(file)
     $('.file').removeClass('current-file')
     $(this).toggleClass('current-file')
