@@ -11,11 +11,16 @@ $(document).ready(function(){
   })
 
   $('.saveMarkdown').bind('click', function() {
-    const example = $('#editor').val().match(/\w+/)
+    let example = $('.fileName').text().match(/\w+/)
     const markdownText = $('#editor').val()
     const fileName = window.prompt('Save file as...', example)
+    if (example === 'mmmarkdown') {
+      example = $('#editor').val().match(/\w+/)
+    }
     if (fileName === '') {
       window.alert('invalid file name')
+    } else if (!fileName) {
+      return
     } else {
       $.ajax({
         url: '/api/savingMarkdown',

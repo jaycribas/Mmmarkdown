@@ -16,21 +16,6 @@ blockquote {
   width: 15%;
 }
 
-.current-file {
-  background-color: lightgrey;
-}
-
-.fa-trash {
-  color: grey;
-}
-
-button.trash, button.trash:hover {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
 .appName{
   border-color: slategray;
   border-style: solid;
@@ -60,8 +45,22 @@ button.trash, button.trash:hover {
   padding: 10px;
 }
 
+.current-file {
+  background-color: lightgrey;
+}
+
 .deleteFile {
   float: right;
+}
+
+.fa-trash {
+  color: grey;
+}
+
+.trash {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .createNew {
@@ -83,9 +82,10 @@ button.trash, button.trash:hover {
 .charCounter {
   color: white;
   padding-left: 70%;
+  display: inline-block;
   font-family: Lobster;
   font-size: 12pt;
-  display: inline-block;
+  height: 0;
   bottom: 37px;
   position: relative;
 }
@@ -95,13 +95,12 @@ button.trash, button.trash:hover {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  outline: none;
   background-color: transparent;
   color: white;
-  cursor: pointer;
   float: right;
   right: 10px;
   bottom: 37px;
+  outline: none;
   position: relative;
 }
 
