@@ -1,6 +1,12 @@
 $(document).ready(function(){
 
   $('#editor').bind('keydown keyup keypress', function (){
+    if (!this.value) {
+      $('.charCounter').text('0 characters')
+    }
+    if (this.value) {
+      $('.charCounter').text(this.value.match(/\S/g).length + ' characters')
+    }
     $('#preview').html(marked(this.value))
   })
 
@@ -29,6 +35,7 @@ $(document).ready(function(){
     if (file === 'mmmarkdown.md') {
       $('#editor').val('')
       $('#preview').empty()
+      $('.charCounter').text('0 characters')
     } else {
       $.ajax({
         method: 'GET',
@@ -37,6 +44,7 @@ $(document).ready(function(){
         success: function(responseJson){
           $('#editor').val(responseJson.data)
           $('#preview').html(marked(responseJson.data))
+          $('.charCounter').text($('#editor').val().match(/\S/g).length + ' characters')
         }
       })
     }

@@ -80,6 +80,12 @@ button.trash, button.trash:hover {
   padding: 15px;
 }
 
+.charCounter {
+  padding-left: 70%;
+  font-size: 13pt;
+  display: inline-block;
+}
+
 .saveMarkdown {
   cursor: pointer;
   float: right;
