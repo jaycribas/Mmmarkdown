@@ -169,7 +169,7 @@ If you complete all of the specs listed above (the checkboxes), there's no reaso
 - [x] Clicking the trash can icon...
   - [x] Deletes the file from the `data/` folder
   - [x] Shows the sidebar updated without the deleted file
-- [ ] "Word count" section in the header displays the word count for the currently open file
+- [x] "Word count" section in the header displays the word count for the currently open file
 
 ##### Use a Database
 
