@@ -74,8 +74,18 @@ button.trash, button.trash:hover {
 }
 
 .saveMarkdown {
+  font-size: .8em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  color: white;
   cursor: pointer;
   float: right;
+  right: 10px;
+  bottom: 37px;
+  position: relative;
 }
 
 .mainArea {
