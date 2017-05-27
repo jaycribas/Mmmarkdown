@@ -3,6 +3,11 @@
 Project Name: shrill-flycatcher  
 Team: Jay Cribas, Greg Kousagi  
 
+## Installation instructions:
+  ```
+  npm i && npm start
+  ```
+
 ## Challenge Rating
 
 This goal will likely be within your ZPD if you...
